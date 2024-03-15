@@ -27,7 +27,6 @@ export default function MoneyFromTransferDetail(props) {
                 <div className="col ms-4">
                     <h4>MoneyFromTransfer ID: {MoneyFromTransfer.MoneyFromTransferID}</h4>
                     <h4>Account Balance : {MoneyFromTransfer.AccountBalance}</h4>
-                    <h4>Current Balance : {MoneyFromTransfer.CurrentBalance}</h4>
                     <form onSubmit={handleSubmit}>
                         <input
                             className="input-group"
