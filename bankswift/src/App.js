@@ -38,7 +38,9 @@ function App() {
 
   // Fetch data from the Django backend API when the component mounts
   useEffect(() => {
-    fetch('https://bankswiftbackend.onrender.com/api/data/')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/data/`)
+    // fetch(`${process.env.REACT_APP_BACKEND_URL}/api/data/`, {
+
       .then(response => response.json())
       .then(data => {
         // Handle the fetched data
@@ -111,7 +113,7 @@ function App() {
       };
   
       // Send the transfer data to the backend
-      fetch('https://bankswiftbackend.onrender.com/api/transfer/', {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/transfer/`, {
 
         method: 'POST',
         headers: {
